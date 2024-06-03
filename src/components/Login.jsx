@@ -68,13 +68,12 @@ export const Login = ({ switchAuthHandler }) => {
 
   const isSubmitButtonDisabled = isLoading || !formState.password.isValid || !formState.email.isValid
   return (
-    <div className="container d-flex justify-content-center align-items-center vh-100">
-      <div className="login-box p-5 rounded shadow" style={{ background: 'rgba(0, 0, 0, 0.7)', color: 'white' }}>
-        <div className="login-box-title mb-4">
-          <h1 className="text-warning">Bank Sterrenfall</h1>
-        </div>
+    <div className="container">
+      <div className="login-box">
+        <div className="login-box-title">
+        <h1>Bank Sterrenfall</h1></div>
         <form>
-          <div className="input-group mb-3">
+          <div className="input-group">
             <Input
               field="email"
               label="Correo electrónico"
@@ -84,10 +83,9 @@ export const Login = ({ switchAuthHandler }) => {
               onBlurHandler={handleInputValidationOnBlur}
               showErrorMessage={formState.email.showError}
               validationMessage={emailValidationMessage}
-              className="form-control"
             />
           </div>
-          <div className="input-group mb-3">
+          <div className="input-group">
             <Input
               field="password"
               label="Contraseña"
@@ -97,14 +95,13 @@ export const Login = ({ switchAuthHandler }) => {
               onBlurHandler={handleInputValidationOnBlur}
               showErrorMessage={formState.password.showError}
               validationMessage={passwordValidationMessage}
-              className="form-control"
             />
           </div>
-          <button className="btn btn-warning w-100" onClick={handleLogin} disabled={isSubmitButtonDisabled}>
+          <button className="submit" onClick={handleLogin} disabled={isSubmitButtonDisabled}>
             Iniciar sesión
           </button>
-          <hr className="my-4" />
-          <span className="switch-auth" onClick={switchAuthHandler} style={{ color: '#ff9101', cursor: 'pointer' }}>
+          <hr />
+          <span className="switch-auth" onClick={switchAuthHandler}>
             No tienes una cuenta? Regístrate
           </span>
         </form>
