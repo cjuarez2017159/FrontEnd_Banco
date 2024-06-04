@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import logo from '../assets/img/BankSterrenfall.svg'
+import logo from '../assets/img/BankSterrenfall.png'
 
 export const Logo = ({text}) => {
     return(

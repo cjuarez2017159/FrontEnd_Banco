@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import React from "react";
 import { useState } from "react";
 import { Logo } from "./Logo";
 import { Input } from "./Input";
@@ -9,7 +9,8 @@ import {
   validatePassword,
 } from "../shared/validators";
 import { useLogin } from "../shared/hooks";
-import 'bootstrap/dist/css/bootstrap.min.css'; // Importar Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../pages/auth/authPage.css'; 
 
 export const Login = ({ switchAuthHandler }) => {
   const { login, isLoading } = useLogin();
@@ -70,41 +71,43 @@ export const Login = ({ switchAuthHandler }) => {
   return (
     <div className="container">
       <div className="login-box">
-        <div className="login-box-title">
-        <h1>Bank Sterrenfall</h1></div>
-        <form>
-          <div className="input-group">
-            <Input
-              field="email"
-              label="Correo electrónico"
-              value={formState.email.value}
-              onChangeHandler={handleInputValueChange}
-              type="text"
-              onBlurHandler={handleInputValidationOnBlur}
-              showErrorMessage={formState.email.showError}
-              validationMessage={emailValidationMessage}
-            />
-          </div>
-          <div className="input-group">
-            <Input
-              field="password"
-              label="Contraseña"
-              value={formState.password.value}
-              onChangeHandler={handleInputValueChange}
-              type="password"
-              onBlurHandler={handleInputValidationOnBlur}
-              showErrorMessage={formState.password.showError}
-              validationMessage={passwordValidationMessage}
-            />
-          </div>
-          <button className="submit" onClick={handleLogin} disabled={isSubmitButtonDisabled}>
-            Iniciar sesión
-          </button>
-          <hr />
-          <span className="switch-auth" onClick={switchAuthHandler}>
-            No tienes una cuenta? Regístrate
-          </span>
-        </form>
+        <div className="login-box-left">
+          <h1>Bank Sterrenfall</h1>
+          <img src="../assets/img/BankSterrenfall.png" alt="Logo" className="login-logo" />
+        </div>
+        <div className="login-box-right">
+          <h2>Login</h2>
+          <form>
+            <div className="input-group">
+              <Input
+                field="email"
+                label="Correo electrónico"
+                value={formState.email.value}
+                onChangeHandler={handleInputValueChange}
+                type="text"
+                onBlurHandler={handleInputValidationOnBlur}
+                showErrorMessage={formState.email.showError}
+                validationMessage={emailValidationMessage}
+              />
+            </div>
+            <div className="input-group">
+              <Input
+                field="password"
+                label="Contraseña"
+                value={formState.password.value}
+                onChangeHandler={handleInputValueChange}
+                type="password"
+                onBlurHandler={handleInputValidationOnBlur}
+                showErrorMessage={formState.password.showError}
+                validationMessage={passwordValidationMessage}
+              />
+            </div>
+            <button className="submit" onClick={handleLogin} disabled={isSubmitButtonDisabled}>
+              Iniciar sesión
+            </button>
+            <hr />
+          </form>
+        </div>
       </div>
     </div>
   );
