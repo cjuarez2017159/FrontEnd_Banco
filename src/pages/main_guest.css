@@ -1,0 +1,110 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+
+  }
+  
+  /* Estilos para el header */
+  .header {
+    background-color: #FFA500;
+    padding: 10px 20px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+  }
+  
+  .logo {
+    background-color: #FFA500;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  .navbar-nav {
+    padding: 50px 0 4px;
+  }
+  
+  .navbar-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .navbar-nav li {
+    margin: 0 10px;
+  }
+  
+  .navbar-nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    background-color: #4B0082;
+    border-radius: 5px;
+  }
+  
+  /* Estilos para el hero */
+  .hero {
+    background-color: #2C3E50;
+    color: white;
+    text-align: center;
+    padding: 50px 30px;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; /* Agrega un margen para separar el hero del navbar */
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  /* Estilos para las features */
+  .features {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .feature {
+    text-align: center;
+    margin: 20px;
+    width: calc(33.33% - 40px);
+  }
+  
+  .feature img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .feature h2 {
+    color: #FFA500;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+  } 
