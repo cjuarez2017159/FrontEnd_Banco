@@ -1,5 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./main_guest.css";
+import bank from "../assets/img/bank.png";
+import bag from "../assets/img/bag.png";
+import star from "../assets/img/star.png";
 
 export const Main_guest = () => {
   return (
@@ -62,28 +65,16 @@ export const Main_guest = () => {
         </section>
         <section className="features container">
           <div className="row">
-            <div className="feature col-md-4">
-              <img
-                src="https://via.placeholder.com/100"
-                alt="Cuentas"
-                className="img-fluid"
-              />
+            <div className="feature col-md-12">
+              <img src={bank} alt="Cuentas" className="img-fluid" />
               <h2>Cuentas</h2>
             </div>
             <div className="feature col-md-4">
-              <img
-                src="https://via.placeholder.com/100"
-                alt="Creditos"
-                className="img-fluid"
-              />
+              <img src={bag} alt="Creditos" className="img-fluid" />
               <h2>Creditos</h2>
             </div>
             <div className="feature col-md-4">
-              <img
-                src="https://via.placeholder.com/100"
-                alt="Beneficios"
-                className="img-fluid"
-              />
+              <img src={star} alt="Beneficios" className="img-fluid" />
               <h2>Beneficios</h2>
             </div>
           </div>
