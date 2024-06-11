@@ -1,6 +1,6 @@
+/* Login.jsx */
 import React from "react";
 import { useState } from "react";
-import { Logo } from "./Logo";
 import { Input } from "./Input";
 import {
   emailValidationMessage,
@@ -10,7 +10,8 @@ import {
 } from "../shared/validators";
 import { useLogin } from "../shared/hooks";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../pages/auth/authPage.css'; 
+import '../pages/auth/authPage.css';
+import logo from '../assets/img/BankSterrenfall.png';
 
 export const Login = ({ switchAuthHandler }) => {
   const { login, isLoading } = useLogin();
@@ -73,7 +74,7 @@ export const Login = ({ switchAuthHandler }) => {
       <div className="login-box">
         <div className="login-box-left">
           <h1>Bank Sterrenfall</h1>
-          <img src="../assets/img/BankSterrenfall.png" alt="Logo" className="login-logo" />
+          <img src={logo} alt="Logo" className="login-logo" />
         </div>
         <div className="login-box-right">
           <h2>Login</h2>

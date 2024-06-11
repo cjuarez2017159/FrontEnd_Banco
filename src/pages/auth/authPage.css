@@ -1,3 +1,5 @@
+/* authPage.css */
+
 html, body {
   margin: 0;
   padding: 0;
@@ -17,7 +19,7 @@ body {
 }
 
 .login-box {
-  background-color: rgba(77, 76, 125, 0.5); /* Fondo más opaco */
+  background-color: rgba(77, 76, 125, 0.5);
   padding: 45px;
   border-radius: 15px;
   box-shadow: 0 0 50px #ff9101;
@@ -66,15 +68,14 @@ body {
 .input-group {
   margin-bottom: 15px;
   text-align: left;
-  color: #F99417;
 }
 
 .input-group label {
   display: block;
   margin-bottom: 5px;
   color: #F99417;
-  border-radius: 5px;
   font-size: 14px;
+  font-weight: bold;  /* Añadir esta línea */
 }
 
 .input-group input {
@@ -88,17 +89,18 @@ body {
 .submit {
   width: 100%;
   padding: 10px;
-  background-color: #5f5892;
-  color: #F99417;
+  background-color: #F99417;
+  color: #4D4C7D;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
   margin-top: 20px;
+  transition: background-color 0.3s, color 0.3s;  /* Añadir esta línea */
 }
 
 .submit:hover {
-  background-color: #F99417;
+  background-color: #ffab42;
   color: #363062;
 }
 

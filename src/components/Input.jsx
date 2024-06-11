@@ -1,3 +1,5 @@
+/* Input.jsx */
+import React from "react";
 /* eslint-disable react/prop-types */
 export const Input = ({
     field,
@@ -21,10 +23,11 @@ export const Input = ({
     return (
         <>
             <div className="auth-form-label">
-                <span>{label}</span>
+                <label htmlFor={field}>{label}</label>
             </div>
             {textarea ? (
                 <textarea
+                    id={field}
                     type={type}
                     value={value}
                     onChange={handleValueChange}
@@ -34,6 +37,7 @@ export const Input = ({
                 />
             ) : (
                 <input
+                    id={field}
                     type={type}
                     value={value}
                     onChange={handleValueChange}
