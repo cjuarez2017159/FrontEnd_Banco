@@ -3,9 +3,7 @@ import React from "react";
 import { useState } from "react";
 import { Input } from "./Input";
 import {
-  emailValidationMessage,
   passwordValidationMessage,
-  validateEmail,
   validatePassword,
 } from "../shared/validators";
 import { useLogin } from "../shared/hooks";
@@ -13,13 +11,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../pages/auth/authPage.css';
 import logo from '../assets/img/BankSterrenfall.png';
 
-export const Login = ({ switchAuthHandler }) => {
+export const Login = () => {
   const { login, isLoading } = useLogin();
 
   const [formState, setFormState] = useState({
     email: {
       value: "",
-      isValid: false,
+      isValid: true,  // Asumimos que el valor siempre es válido si no se va a validar
       showError: false,
     },
     password: {
@@ -40,35 +38,29 @@ export const Login = ({ switchAuthHandler }) => {
   };
 
   const handleInputValidationOnBlur = (value, field) => {
-    let isValid = false;
-    switch (field) {
-      case "email":
-        isValid = validateEmail(value);
-        break;
-      case "password":
-        isValid = validatePassword(value);
-        break;
-      default:
-        break;
+    let isValid = true;  // Asumimos que el valor siempre es válido para el correo electrónico
+    if (field === "password") {
+      isValid = validatePassword(value);
     }
     setFormState((prevState) => ({
       ...prevState,
       [field]: {
         ...prevState[field],
         isValid,
-        showError: !isValid
-      }
-    }))
+        showError: !isValid,
+      },
+    }));
   };
 
   const handleLogin = (event) => {
-    console.log(formState)
-    event.preventDefault()
+    console.log(formState);
+    event.preventDefault();
 
-    login(formState.email.value, formState.password.value)
-  }
+    login(formState.email.value, formState.password.value);
+  };
 
-  const isSubmitButtonDisabled = isLoading || !formState.password.isValid || !formState.email.isValid
+  const isSubmitButtonDisabled = isLoading || !formState.password.isValid;
+
   return (
     <div className="container">
       <div className="login-box">
@@ -82,13 +74,13 @@ export const Login = ({ switchAuthHandler }) => {
             <div className="input-group">
               <Input
                 field="email"
-                label="Correo electrónico"
+                label="Número de Cuenta"
                 value={formState.email.value}
                 onChangeHandler={handleInputValueChange}
                 type="text"
                 onBlurHandler={handleInputValidationOnBlur}
                 showErrorMessage={formState.email.showError}
-                validationMessage={emailValidationMessage}
+                validationMessage=""
               />
             </div>
             <div className="input-group">
