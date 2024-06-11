@@ -10,12 +10,10 @@ import logo from "../assets/img/logo.png";
 
 export const Main_guest = () => {
   return (
-    <div >
+    <div>
       <header>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light" >
-          <a className="navbar-brand logo" href="#" >
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <img src={logo} alt="XD" className="img_logo" />
-          </a>
           <button
             className="navbar-toggler"
             type="button"
