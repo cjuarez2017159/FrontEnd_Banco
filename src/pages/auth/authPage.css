@@ -1,13 +1,8 @@
 /* authPage.css */
 
-html, body {
-  margin: 0;
-  padding: 0;
+.auth-page {
   width: 100%;
-  height: 100%;
-}
-
-body {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,7 +70,7 @@ body {
   margin-bottom: 5px;
   color: #F99417;
   font-size: 14px;
-  font-weight: bold;  /* Añadir esta línea */
+  font-weight: bold;
 }
 
 .input-group input {
@@ -96,7 +91,7 @@ body {
   cursor: pointer;
   font-size: 16px;
   margin-top: 20px;
-  transition: background-color 0.3s, color 0.3s;  /* Añadir esta línea */
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .submit:hover {

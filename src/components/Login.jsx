@@ -1,4 +1,3 @@
-/* Login.jsx */
 import React from "react";
 import { useState } from "react";
 import { Input } from "./Input";
@@ -17,7 +16,7 @@ export const Login = () => {
   const [formState, setFormState] = useState({
     email: {
       value: "",
-      isValid: true,  // Asumimos que el valor siempre es válido si no se va a validar
+      isValid: true,
       showError: false,
     },
     password: {
@@ -38,7 +37,7 @@ export const Login = () => {
   };
 
   const handleInputValidationOnBlur = (value, field) => {
-    let isValid = true;  // Asumimos que el valor siempre es válido para el correo electrónico
+    let isValid = true;  
     if (field === "password") {
       isValid = validatePassword(value);
     }
