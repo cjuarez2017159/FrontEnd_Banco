@@ -28,16 +28,18 @@ body {
   z-index: 1030;
 }
 
-.logo {
-  background-color: #FFA500;
-  padding: 10px;
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
+.img_logo{
+  height: 175px;
+  width: 175px;
 }
 
 .navbar-nav {
+  height: 200px;
   padding: 0 4px;
+}
+
+.nav-item {
+  height: 200px;
 }
 
 .navbar-nav ul {
@@ -111,8 +113,4 @@ body {
 
 .features-container {
   width: 100vw;
-}
-
-.img_logo{
-  height: 200px;
 }
