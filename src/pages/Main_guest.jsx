@@ -3,14 +3,18 @@ import "./main_guest.css";
 import bank from "../assets/img/bank.png";
 import bag from "../assets/img/bag.png";
 import star from "../assets/img/star.png";
+import megaphone from "../assets/img/megaphone.png";
+import plan from "../assets/img/plan.png";
+import laptop from "../assets/img/laptop.png";
+import logo from "../assets/img/logo.png";
 
 export const Main_guest = () => {
   return (
-    <div>
+    <div >
       <header>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <a className="navbar-brand logo" href="#">
-            Logo
+        <nav className="navbar navbar-expand-lg navbar-light bg-light" >
+          <a className="navbar-brand logo" href="#" >
+            <img src={logo} alt="XD" className="img_logo" />
           </a>
           <button
             className="navbar-toggler"
@@ -61,7 +65,7 @@ export const Main_guest = () => {
       </header>
       <main>
         <section className="hero jumbotron text-center">
-          <h1>bank sternenfall</h1>
+          <h1 className="title_hero">bank sternenfall</h1>
         </section>
         <section className="features container">
           <div className="row">
@@ -69,12 +73,28 @@ export const Main_guest = () => {
               <img src={bank} alt="Cuentas" className="img-fluid" />
               <h2>Cuentas</h2>
             </div>
-            <div className="feature col-md-4">
+            <div className="feature col-md-12">
               <img src={bag} alt="Creditos" className="img-fluid" />
               <h2>Creditos</h2>
             </div>
-            <div className="feature col-md-4">
+            <div className="feature col-md-12">
               <img src={star} alt="Beneficios" className="img-fluid" />
+              <h2>Beneficios</h2>
+            </div>
+          </div>
+        </section>
+        <section className="features container">
+          <div className="row">
+            <div className="feature col-md-12">
+              <img src={megaphone} alt="Cuentas" className="img-fluid" />
+              <h2>Cuentas</h2>
+            </div>
+            <div className="feature col-md-12">
+              <img src={plan} alt="Creditos" className="img-fluid" />
+              <h2>Creditos</h2>
+            </div>
+            <div className="feature col-md-12">
+              <img src={laptop} alt="Beneficios" className="img-fluid" />
               <h2>Beneficios</h2>
             </div>
           </div>
