@@ -13,7 +13,8 @@ export const Main_guest = () => {
     <div>
       <header>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <img src={logo} alt="XD" className="img_logo" />
+          
+          <img src={logo} alt="XD" className="img_logo" />
           <button
             className="navbar-toggler"
             type="button"
@@ -28,34 +29,39 @@ export const Main_guest = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Cuentas
-                </a>
+                <button className="Btn" href="#">
+                  <img src={bank} alt="icon" /> Cuentas
+                </button>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  ...
-                </a>
+                <button className="Btn" href="#">
+                  <img src={bag} alt="icon" /> Creditos
+                </button>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  ...
-                </a>
+                <button className="Btn" href="#">
+                  <img src={star} alt="icon" /> Beneficios
+                </button>
+              </li>
+              <li className="nav-item" href="#">
+                <button className="Btn">
+                  <img src={megaphone} alt="icon" /> Ofertas
+                </button>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  ...
-                </a>
+                <button className="Btn" href="#">
+                  <img src={plan} alt="icon" /> Planes
+                </button>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  ...
-                </a>
+                <button className="Btn" href="#">
+                  <img src={laptop} alt="icon" /> Recargos
+                </button>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <button className="Btn" href="#">
                   Login
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -65,7 +71,7 @@ export const Main_guest = () => {
         <section className="hero jumbotron text-center">
           <h1 className="title_hero">bank sternenfall</h1>
         </section>
-        <section className="features container">
+        <section className="features container section-with-line">
           <div className="row">
             <div className="feature col-md-12">
               <img src={bank} alt="Cuentas" className="img-fluid" />
@@ -84,19 +90,50 @@ export const Main_guest = () => {
         <section className="features container">
           <div className="row">
             <div className="feature col-md-12">
-              <img src={megaphone} alt="Cuentas" className="img-fluid" />
-              <h2>Cuentas</h2>
+              <img src={megaphone} alt="Ofertas" className="img-fluid" />
+              <h2>Promociones</h2>
             </div>
             <div className="feature col-md-12">
               <img src={plan} alt="Creditos" className="img-fluid" />
-              <h2>Creditos</h2>
+              <h2>Planes</h2>
             </div>
             <div className="feature col-md-12">
               <img src={laptop} alt="Beneficios" className="img-fluid" />
-              <h2>Beneficios</h2>
+              <h2>Recargos</h2>
             </div>
           </div>
         </section>
+        <section className="features container">
+          <div className="row">
+            <div className="feature col-md-4">
+              <h3 className="h3-border">
+                Descuento aplica al realizar el pago del 1 de enero al 31 de
+                diciembre 2024 en MAX, Netflix, Amazon Prime Video, Disney Plus,
+                Star Plus, Paramount Plus y/o HULU. El monto máximo de reintegro
+              </h3>
+            </div>
+            <div className="feature col-md-4">
+              <h3 className="h3-border">
+                Cuenta Corriente de Ahorro en quetzales en donde tienes la
+                disponibilidad inmediata de tus fondos. Además, no tienes ningún
+                recargo por manejo de cuentas y tendras beneficios por la cuenta.
+              </h3>
+            </div>
+            <div className="feature col-md-4">
+              <h3 className="h3-border">
+                Rercargo por no pago en la fecha maxima de pago de la tarjeta, se dara
+                si la cuota en mora es igual o mayor a US$5.00. Consiste en un
+                porcentaje sobre el capital en mora, con un monto maximo establecido.
+              </h3>
+            </div>
+          </div>
+        </section>
+        <section className="hero_final">
+          <h2>bank sternenfall</h2>
+        </section>
+        <footer className="footer">
+          <p>&copy; 2024 Bank Sternenfall. Todos los derechos reservados.</p>
+        </footer>
       </main>
     </div>
   );

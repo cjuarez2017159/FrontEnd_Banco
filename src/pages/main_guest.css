@@ -28,39 +28,71 @@ body {
   z-index: 1030;
 }
 
+.navbar navbar-expand-lg navbar-light bg-light{
+  height: 200px;
+ 
+}
+
 .img_logo{
-  height: 175px;
+  height: 100px;
   width: 175px;
 }
 
-.navbar-nav {
-  height: 200px;
-  padding: 0 4px;
+.Btn img {
+  width: 20px; /* Ajusta el tamaño según tus necesidades */
+  height: 20px; /* Ajusta el tamaño según tus necesidades */
+  margin-right: 8px; /* Espacio entre la imagen y el texto */
 }
 
-.nav-item {
-  height: 200px;
-}
-
-.navbar-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.Btn {
+  width: 130px;
+  height: 40px;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  background-color: #363062; /* Morado */
+  border: none;
+  color: white; /* Texto blanco */
+  font-weight: 600;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px #363062;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
 }
 
-.navbar-nav li {
-  margin: 0 10px;
+.svgIcon {
+  width: 16px;
 }
 
-.navbar-nav a {
-  text-decoration: none;
-  color: white;
-  padding: 10px 15px;
-  background-color: #4B0082;
-  border-radius: 5px;
+.svgIcon path {
+  fill: #F99417; /* Color del icono */
 }
+
+.Btn::before {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  content: "";
+  background-color: #F99417; /* Anaranjado */
+  border-radius: 50%;
+  left: -100%;
+  top: 0;
+  transition-duration: .3s;
+  mix-blend-mode: difference;
+}
+
+.Btn:hover::before {
+  transform: translate(100%,-50%);
+  border-radius: 0;
+}
+
+.Btn:active {
+  transform: translate(5px,5px);
+  transition-duration: .3s;
+}
+
 
 .hero {
   background-image: url(../assets/img/fondo.png);
@@ -69,7 +101,7 @@ body {
   color: white;
   text-align: center;
   padding: 50px 30px;
-  height: 30vh;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,7 +131,7 @@ body {
 }
 
 .feature img {
-  max-width: 100%;
+  max-width: 200px;
   height: auto;
   border-radius: 10px;
 }
@@ -113,4 +145,39 @@ body {
 
 .features-container {
   width: 100vw;
+}
+
+.h3-border {
+  border: 5px solid black; /* Define el color y grosor del borde */
+  box-shadow: 5px 5px 10px #363062;
+  padding: 10px; /* Espacio interior del borde */
+  border-radius: 5px; /* Bordes redondeados opcional */
+}
+
+.section-with-line {
+  border-bottom: 15px solid #363062; /* Línea en la parte inferior */
+  padding-bottom: 0px; /* Espacio interior en la parte inferior */
+  margin-bottom: 20px; /* Espacio exterior en la parte inferior */
+}
+
+.hero_final {
+  background-color: #363062; /* Fondo similar al del resto de la página */
+  color: white; /* Color del texto */
+  text-align: center; /* Centrar el texto */
+  padding: 20px 0; /* Espaciado */
+}
+
+.footer {
+  background-color: #363062; /* Fondo del pie de página */
+  color: #fff; /* Color del texto */
+  text-align: center; /* Centrar el texto */
+  padding: 10px 0; /* Espaciado */
+  border-top: 2px solid #363062; /* Línea superior opcional */
+  position: fixed; /* Mantener en la parte inferior de la pantalla */
+  width: 100%; /* Asegurar que ocupe todo el ancho */
+  bottom: 0; /* Fijar al fondo */
+}
+
+.navbar-collapse {
+  justify-content: center; /* Centra los elementos del menú */
 }
