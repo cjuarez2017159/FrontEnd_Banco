@@ -1,4 +1,3 @@
-
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { login as loginRequest } from "../../services/api"
@@ -6,14 +5,13 @@ import toast from "react-hot-toast"
 
 export const useLogin = () => {
     const [isLoading, setIsLoading] = useState(false)
-
     const navigate = useNavigate()
 
-    const login = async (email, password) => {
+    const login = async (account_number, password) => {  
         setIsLoading(true)
 
         const response = await loginRequest({
-            email,
+            account_number,  
             password
         })
         console.log(response)
@@ -25,14 +23,12 @@ export const useLogin = () => {
             )
         }
 
-        const { user } = response.data
-        if (user) {
-            
-            localStorage.setItem('user', JSON.stringify(user))
-        }else {
+        const { userDetails } = response.data
+        if (userDetails) {  
+            localStorage.setItem('user', JSON.stringify(userDetails))  
+        } else {
             localStorage.removeItem('user')
         }
-        
 
         navigate('/')
     }

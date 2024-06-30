@@ -14,7 +14,7 @@ export const Login = () => {
   const { login, isLoading } = useLogin();
 
   const [formState, setFormState] = useState({
-    email: {
+    account_number: {  
       value: "",
       isValid: true,
       showError: false,
@@ -37,7 +37,7 @@ export const Login = () => {
   };
 
   const handleInputValidationOnBlur = (value, field) => {
-    let isValid = true;  
+    let isValid = true;
     if (field === "password") {
       isValid = validatePassword(value);
     }
@@ -54,8 +54,7 @@ export const Login = () => {
   const handleLogin = (event) => {
     console.log(formState);
     event.preventDefault();
-
-    login(formState.email.value, formState.password.value);
+    login(formState.account_number.value, formState.password.value);  
   };
 
   const isSubmitButtonDisabled = isLoading || !formState.password.isValid;
@@ -72,13 +71,13 @@ export const Login = () => {
           <form>
             <div className="input-group">
               <Input
-                field="email"
+                field="account_number"  
                 label="Número de Cuenta"
-                value={formState.email.value}
+                value={formState.account_number.value}   
                 onChangeHandler={handleInputValueChange}
                 type="text"
                 onBlurHandler={handleInputValidationOnBlur}
-                showErrorMessage={formState.email.showError}
+                showErrorMessage={formState.account_number.showError}   
                 validationMessage=""
               />
             </div>
