@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./main_guest.css";
+import { useNavigate } from "react-router-dom";
 import bank from "../assets/img/bank.png";
 import bag from "../assets/img/bag.png";
 import star from "../assets/img/star.png";
@@ -9,6 +10,13 @@ import laptop from "../assets/img/laptop.png";
 import logo from "../assets/img/logo.png";
 
 export const Main_guest = () => {
+  const navigate = useNavigate();
+
+  const handleNavigateLogin = () => {
+    navigate('/auth');
+};
+
+
   return (
     <div>
       <header>
@@ -59,7 +67,7 @@ export const Main_guest = () => {
                 </button>
               </li>
               <li className="nav-item">
-                <button className="Btn" href="#">
+                <button className="Btn" onClick={handleNavigateLogin}>
                   Login
                 </button>
               </li>
