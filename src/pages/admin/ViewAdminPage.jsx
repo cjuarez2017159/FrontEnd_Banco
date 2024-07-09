@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { getAllAccounts } from '../../services/api';
-import CustomNavbar from './Navbar';
+//import { getAllAccounts } from '../../services/api';
+import CustomNavbar from '../../components/NavbarAdmin';
 import './viewAdminPage.css';
 
-export const viewAdmin = () => {
+export const ViewAdmin = () => {
   const [accounts, setAccounts] = useState([]);
 
   useEffect(() => {
-    getAllAccounts().then(data => setAccounts(data));
+//    getAllAccounts().then(data => setAccounts(data));
   }, []);
 
   const handleDeactivate = (accountId) => {
@@ -26,17 +26,6 @@ export const viewAdmin = () => {
     <div>
       <CustomNavbar user={{ name: "Usuario Ejemplo", accountNumber: "123456789" }} />
       <div className="dashboard-container">
-        <h1>Dashboard de Administrador</h1>
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Nombre</th>
-              <th>Tipo</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
             {accounts.map(account => (
               <tr key={account.id}>
                 <td>{account.id}</td>
@@ -49,8 +38,6 @@ export const viewAdmin = () => {
                 </td>
               </tr>
             ))}
-          </tbody>
-        </table>
       </div>
     </div>
   );

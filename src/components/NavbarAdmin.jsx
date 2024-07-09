@@ -10,8 +10,7 @@ const CustomNavbar = ({ user }) => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
             <Nav.Item className="navbar-text text-center">
-              <span>User: {user.name}</span><br />
-              <span>No. Cuenta: {user.accountNumber}</span>
+              <span>Administrador</span>
             </Nav.Item>
           </Nav>
           <Nav className="ml-auto">

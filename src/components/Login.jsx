@@ -14,7 +14,7 @@ export const Login = () => {
   const { login, isLoading } = useLogin();
 
   const [formState, setFormState] = useState({
-    email: {
+    account_number: {  
       value: "",
       isValid: true,
       showError: false,
@@ -37,7 +37,7 @@ export const Login = () => {
   };
 
   const handleInputValidationOnBlur = (value, field) => {
-    let isValid = true;  
+    let isValid = true;
     if (field === "password") {
       isValid = validatePassword(value);
     }
@@ -51,12 +51,20 @@ export const Login = () => {
     }));
   };
 
-  const handleLogin = (event) => {
-    console.log(formState);
+  const handleLogin = async (event) => {
     event.preventDefault();
-
-    login(formState.email.value, formState.password.value);
+    const response = await login(formState.account_number.value, formState.password.value);
+    const user = JSON.parse(localStorage.getItem('user'));
+  
+    if (user && user.role) {
+      if (user.role === 'admin') {
+        navigate('/admin');
+      } else {
+        navigate('/');
+      }
+    }
   };
+  
 
   const isSubmitButtonDisabled = isLoading || !formState.password.isValid;
 
@@ -72,13 +80,13 @@ export const Login = () => {
           <form>
             <div className="input-group">
               <Input
-                field="email"
+                field="account_number"  
                 label="Número de Cuenta"
-                value={formState.email.value}
+                value={formState.account_number.value}   
                 onChangeHandler={handleInputValueChange}
                 type="text"
                 onBlurHandler={handleInputValidationOnBlur}
-                showErrorMessage={formState.email.showError}
+                showErrorMessage={formState.account_number.showError}   
                 validationMessage=""
               />
             </div>

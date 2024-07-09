@@ -4,7 +4,7 @@ const apiClient = axios.create({
     baseURL: 'http://127.0.0.1:3000/bank/v1',
     timeout: 5000
 })
-/** 
+
 apiClient.interceptors.request.use(
     (config) => {
         const userDetails = localStorage.getItem('user')
@@ -18,7 +18,7 @@ apiClient.interceptors.request.use(
         return Promise.reject(e)
     }
 )
-*/
+
 export const login = async (data) => {
     try {
         console.log({ data })
