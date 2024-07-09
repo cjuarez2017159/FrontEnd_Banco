@@ -1,0 +1,100 @@
+/* Ensure the container takes the full height of the viewport */
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    background-color: #4c3c81;
+    color: white;
+    padding: 10px;
+    flex: 0 1 auto; /* Allow header to shrink if needed */
+  }
+  
+ .user-info {
+  display: flex;
+  justify-content: space-between; /* Cambia esto */
+  justify-content: flex-end; /* Añade esta línea */
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
+
+.user-info p:first-child {
+  margin-right: auto; /* Empuja el primer párrafo al inicio del contenedor */
+}
+
+  
+  .content-row {
+    flex: 1 1 auto; /* Take the remaining space */
+    display: flex;
+  }
+  
+  .content {
+    background-color: #242b38;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+  }
+  
+  .account-card {
+    background-color: white;
+    color: black;
+    width: 80%; /* Adjust width to be more responsive */
+    margin: 20px 0; /* Increase vertical margin for better spacing */
+    padding: 20px; /* Increase padding for a more spacious look */
+    border-radius: 10px; /* Slightly more rounded corners */
+    border: 2px solid #c9c3e1;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  }
+  
+  .account-card .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .account-card .card-title {
+    font-size: 1.25rem; /* Increase font size for title */
+    font-weight: 600;
+    margin-bottom: 10px; /* Add margin below title */
+  }
+  
+  .account-card .card-text {
+    font-size: 1rem; /* Adjust font size for text */
+    color: #666; /* Lighter color for text */
+    margin-bottom: 10px; /* Add margin below text */
+  }
+  
+  .account-card .card-link {
+    color: #4c3c81; /* Match link color with theme */
+    text-decoration: none; /* Remove underline */
+    font-weight: 500; /* Slightly bolder link text */
+    margin-bottom: 20px; /* Add margin below link */
+  }
+  
+  .account-card .card-link:hover {
+    text-decoration: underline; /* Underline on hover for accessibility */
+  }
+  
+  .account-card .amount {
+    font-size: 1.75rem; /* Increase font size for amount */
+    font-weight: bold;
+    position: absolute;
+    right: 20px; /* Adjust position for better spacing */
+    bottom: 20px;
+    color: #4c3c81; /* Match amount color with theme */
+  }
+  
+  .star-icon {
+    position: absolute;
+    top: 20px; /* Adjust position for better spacing */
+    right: 20px;
+    font-size: 1.75rem; /* Increase size for visibility */
+    color: orange;
+  }
+  
+  
+  
