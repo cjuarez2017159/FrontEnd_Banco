@@ -9,11 +9,11 @@ export const useLogin = () => {
 
     const navigate = useNavigate()
 
-    const login = async (email, password) => {
+    const login = async (account_number, password) => {
         setIsLoading(true)
 
         const response = await loginRequest({
-            email,
+            account_number,
             password
         })
         console.log(response)
