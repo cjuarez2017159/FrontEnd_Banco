@@ -1,0 +1,1 @@
+export { viewAdmin } from './viewAdminPage'
