@@ -1,0 +1,150 @@
+/* Ensure the container takes the full height of the viewport */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #4c3c81;
+  color: white;
+  padding: 10px;
+  flex: 0 1 auto; /* Allow header to shrink if needed */
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.user-info p:first-child {
+  margin-right: auto; /* Empuja el primer párrafo al inicio del contenedor */
+}
+
+.content-row {
+  flex: 1 1 auto; /* Take the remaining space */
+  display: flex;
+}
+
+.content {
+  background-image: url(../assets/img/fondo.png);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically */
+}
+
+.account-card {
+  background-color: white;
+  color: black;
+  width: 40%; /* Adjust width to be more responsive */
+  margin: 20px 0; /* Increase vertical margin for better spacing */
+  padding: 20px; /* Increase padding for a more spacious look */
+  border-radius: 10px; /* Slightly more rounded corners */
+  border: 2px solid #c9c3e1;
+  position: sticky;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+}
+
+.account-card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.account-card .card-title {
+  font-size: 1.25rem; /* Increase font size for title */
+  font-weight: 600;
+  margin-bottom: 10px; /* Add margin below title */
+}
+
+.account-card .card-text {
+  font-size: 1rem; /* Adjust font size for text */
+  color: #3007ff; /* Lighter color for text */
+  margin-bottom: 10px; /* Add margin below text */
+}
+
+.account-card .card-link {
+  color: #4c3c81; /* Match link color with theme */
+  text-decoration: none; /* Remove underline */
+  font-weight: 500; /* Slightly bolder link text */
+  margin-bottom: 10px; /* Add margin below link */
+}
+
+.account-card .card-link:hover {
+  text-decoration: underline; /* Underline on hover for accessibility */
+}
+
+.account-card .amount {
+  font-size: 1.75rem; /* Increase font size for amount */
+  font-weight: bold;
+  position: absolute;
+  right: 20px; /* Adjust position for better spacing */
+  bottom: 20px;
+  color: #4c3c81; /* Match amount color with theme */
+  text-align: right;
+}
+
+.star-icon {
+  position: absolute;
+  top: 20px; /* Adjust position for better spacing */
+  right: 20px;
+  font-size: 1.75rem; /* Increase size for visibility */
+  color: orange;
+  text-align: right;
+}
+
+/* Sidebar */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  border-left: 2px solid #c9c3e1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente el contenido */
+}
+
+.sidebar a {
+  padding: 90px; /* Aumenta el padding para hacer los botones más grandes */
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: #333;
+  transition: 0.3s;
+  display: block;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
+.sidebar a:hover {
+  color: #4c3c81;
+}
+
+/* Sidebar open state */
+.sidebar.open {
+  width: 250px; /* Ancho del sidebar cuando está abierto */
+}
+
+.navbar-toggler {
+  background-image: url(../assets/img/icon-menu.png);
+  background-repeat: no-repeat;
+  background-size: contain; /* Ajusta el tamaño de la imagen */
+  background-position: center; /* Centra la imagen */
+  border: none; /* Elimina el borde del botón */
+  width: 90px; /* Ancho del botón */
+  height: 60px; /* Altura del botón */
+  cursor: pointer;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
