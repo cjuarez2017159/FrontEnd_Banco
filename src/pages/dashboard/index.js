@@ -1,1 +1,1 @@
-export { ViewAdmin } from './DashboardPage'
+export { DashboardPage } from './DashboardPage'

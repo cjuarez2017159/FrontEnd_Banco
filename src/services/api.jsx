@@ -30,3 +30,39 @@ export const login = async (data) => {
         }
     }
 }
+
+export const getAllAccounts = async () => {
+    try {
+        const response = await apiClient.get('/accounts'); // Asegúrate de que la ruta coincida
+        return response.data;
+    } catch (e) {
+        return {
+            error: true,
+            e
+        }
+    }
+}
+
+export const deactivateAccount = async (id) => {
+    try {
+        const response = await apiClient.post(`/accounts/${id}/deactivate`);
+        return response.data;
+    } catch (e) {
+        return {
+            error: true,
+            e
+        }
+    }
+}
+
+export const editAccount = async (id, data) => {
+    try {
+        const response = await apiClient.put(`/accounts/${id}`, data);
+        return response.data;
+    } catch (e) {
+        return {
+            error: true,
+            e
+        }
+    }
+}
