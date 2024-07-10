@@ -28,7 +28,8 @@
 }
 
 .content {
-  background-image: url(../assets/img/fondo.png);
+/*background-image: url(../assets/img/fondo.png);*/
+  background-color: white;
   padding: 20px;
   display: flex;
   flex-direction: column;
